@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
 }
 
@@ -18,4 +18,46 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #773131;
+} */
+
+/* 
+form input {
+  display: block; 
+  margin-bottom: 16px;
+}
+
+input {
+  background: transparent;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+button {
+  width: 150px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: rgb(11, 95, 15);
+  
+} */
+
+.styleLink {
+  text-decoration: underline;
+  color: rgb(81, 137, 249);
 }
