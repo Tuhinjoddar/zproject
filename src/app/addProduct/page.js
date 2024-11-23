@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 
 
-export default function page() {
+export default function Page() {
 
     const [isClient, setIsClient] = useState(false);
     const [product, setProduct] = useState("");

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 async function getProduct(id) {
     try {
-        const response = await fetch(`http://localhost:3000/api/products/${id}`, { cache: "no-cache" });
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`, { cache: "no-cache" });
         if (!response.ok) {
             throw new Error("Failed to fetch data");
         }
@@ -20,7 +20,7 @@ async function getProduct(id) {
 
 export default async function Page({ params }) {
 
-    const { editProductId } = await params
+    const editProductId = await params.editProductId
     //console.log(editProductId);
     const product = await getProduct(editProductId)
     //console.log(product.id);

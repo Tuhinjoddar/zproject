@@ -2,13 +2,17 @@
 import Link from "next/link";
 
 export const getProducts = async () => {
-
-    const response = await fetch("http://localhost:3000/api/products");
-    if (!response.ok) {
-        throw new Error("Failed to fetch data");
+    try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`);
+        if (!response.ok) {
+            throw new Error("Failed to fetch data");
+        }
+        const data = await response.json();
+        return data.result
+    } catch (error) {
+        console.error("Error fetch products:", error);
     }
-    const data = await response.json();
-    return data.result
+
 
 
 };

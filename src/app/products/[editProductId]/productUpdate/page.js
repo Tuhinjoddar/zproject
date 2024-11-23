@@ -24,7 +24,7 @@ export default function Page({ params }) {
     useEffect(() => {
         async function fetchData() {
             //console.log(params);
-            const { editProductId } = await params;
+            const editProductId = await params.editProductId;
             // console.log(editProductId);
             try {
                 const res = await fetch(`http://localhost:3000/api/products/${editProductId}`);
@@ -54,8 +54,8 @@ export default function Page({ params }) {
 
     const updateProduct = async (e) => {
         e.preventDefault(); // Prevent the default form submission
-        console.log(params);
-        const { editProductId } = await params
+        // console.log(params);
+        const editProductId = await params.editProductId
         // Validate required fields
         if (!product || !price || !company) {
             alert("All fields are required. Please fill in the missing values.");
